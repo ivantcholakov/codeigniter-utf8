@@ -3,29 +3,29 @@ UTF-8 for CodeIgniter
 
 UTF-8 string support for CodeIgniter based on Kohana's implementation.
 
-This feature is provuded by the class UTF8. Its methods are UTF-8 compatible alternatives to the following PHP string functions:
+This feature is provided by the class UTF8. Its methods are UTF-8 compatible alternatives to the following PHP string functions:
 
-ltrim()
-ord()
-rtrim()
-strcasecmp()
-strcspn()
-str_ireplace()
-stristr()
-strlen()
-str_pad()
-strpos()
-strrev()
-strrpos()
-str_split()
-strspn()
-strtolower()
-strtoupper()
-substr()
-substr_replace()
-trim()
-ucfirst()
-ucwords()
+    ltrim()
+    ord()
+    rtrim()
+    strcasecmp()
+    strcspn()
+    str_ireplace()
+    stristr()
+    strlen()
+    str_pad()
+    strpos()
+    strrev()
+    strrpos()
+    str_split()
+    strspn()
+    strtolower()
+    strtoupper()
+    substr()
+    substr_replace()
+    trim()
+    ucfirst()
+    ucwords()
 
 There are also some other useful methods, browse code to get familiar with them.
 
@@ -57,8 +57,11 @@ License Information
 -------------------
 
 For the original code about adaptation to CodeIgniter:
+
 Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013
+
 License: The MIT License, http://opensource.org/licenses/MIT
 
 For Kohana team's code:
+
 License: GNU LGPL 2.1, http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
