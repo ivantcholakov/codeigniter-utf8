@@ -56,12 +56,9 @@ echo UTF8::substr($string, 0, 10) . UTF8::substr($string, 10);
 License Information
 -------------------
 
-For the original code about adaptation to CodeIgniter:
-
+* For the original code about adaptation to CodeIgniter:
 Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013
-
 License: The MIT License, http://opensource.org/licenses/MIT
 
-For Kohana team's code:
-
+* For Kohana team's code:
 License: GNU LGPL 2.1, http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
