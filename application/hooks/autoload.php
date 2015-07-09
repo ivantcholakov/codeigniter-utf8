@@ -2,7 +2,7 @@
 
 /**
  * A simple class autoloader for CodeIgniter
- * @author Ivan Tcholakov <ivantcholakov@gmail.com>, 2013.
+ * @author Ivan Tcholakov <ivantcholakov@gmail.com>, 2013-2015.
  * @license The MIT License
  *
  * Important note: Within the file application/config/config.php find the setting
@@ -38,6 +38,7 @@ function pre_system_1_autoload($class_name) {
 
     // Scanning for classes in specific directories (see the map above).
     if (isset($map[$class_name_lower])) {
+
         require $map[$class_name_lower];
         return true;
     }
@@ -45,7 +46,9 @@ function pre_system_1_autoload($class_name) {
     // Other classes. The first letter of the filename should be in upper case,
     // the rest of the letters - in lower case.
     $file_name = APPPATH."classes/$class_name_ucfirst.php";
+
     if (file_exists($file_name)) {
+
         require $file_name;
         return true;
     }

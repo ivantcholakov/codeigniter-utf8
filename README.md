@@ -57,7 +57,7 @@ License Information
 -------------------
 
 * For the original code about adaptation to CodeIgniter:  
-Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013  
+Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013-2015  
 License: The MIT License, http://opensource.org/licenses/MIT
 
 * For Kohana team's code:  
