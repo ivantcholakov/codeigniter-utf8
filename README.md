@@ -19,6 +19,7 @@ This feature is provided by the class UTF8. Its methods are UTF-8 compatible alt
     strrpos()
     str_split()
     strspn()
+    stripos()
     strtolower()
     strtoupper()
     substr()
@@ -26,6 +27,7 @@ This feature is provided by the class UTF8. Its methods are UTF-8 compatible alt
     trim()
     ucfirst()
     ucwords()
+    wordwrap()
 
 There are also some other useful methods, browse code to get familiar with them.
 
@@ -57,7 +59,7 @@ License Information
 -------------------
 
 * For the original code about adaptation to CodeIgniter:  
-Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013-2015  
+Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013-2020  
 License: The MIT License, http://opensource.org/licenses/MIT
 
 * For Kohana team's code:  

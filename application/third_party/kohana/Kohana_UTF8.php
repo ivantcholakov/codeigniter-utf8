@@ -1,6 +1,6 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php defined('KOHANASYSPATH') or die('No direct script access.');
 /**
- * A port of [phputf8](http://phputf8.sourceforge.net/) to a unified set
+ * A port of [phputf8](http://sourceforge.net/projects/phputf8/) to a unified set
  * of files. Provides multi-byte aware replacement string functions.
  *
  * For UTF-8 support to work correctly, the following requirements must be met:
@@ -146,7 +146,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -172,7 +172,7 @@ class Kohana_UTF8 {
 
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -202,13 +202,43 @@ class Kohana_UTF8 {
 
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
 		}
 
 		return _strpos($str, $search, $offset);
+	}
+
+	/**
+	 * Finds position of first occurrence of a UTF-8 string in case insensitive way.
+	 * This is a UTF8-aware version of [stripos](http://php.net/stripos).
+	 *
+	 *     $position = UTF8::stripos($str, $search);
+	 *
+	 * @author  Ivan Tcholakov <ivantcholakov@gmail.com>
+	 * @param   string   haystack
+	 * @param   string   needle
+	 * @param   integer  offset from which character in haystack to start searching
+	 * @return  integer  position of needle
+	 * @return  boolean  FALSE if the needle is not found
+	 * @uses    UTF8::$server_utf8
+	 */
+	public static function stripos($str, $search, $offset = 0)
+	{
+		if (UTF8::$server_utf8)
+			return mb_stripos($str, $search, $offset, Kohana::$charset);
+
+		if ( ! isset(self::$called[__FUNCTION__]))
+		{
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
+
+			// Function has been called
+			self::$called[__FUNCTION__] = TRUE;
+		}
+
+		return _stripos($str, $search, $offset);
 	}
 
 	/**
@@ -232,7 +262,7 @@ class Kohana_UTF8 {
 
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -264,7 +294,7 @@ class Kohana_UTF8 {
 
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -289,7 +319,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -316,7 +346,7 @@ class Kohana_UTF8 {
 
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -342,7 +372,7 @@ class Kohana_UTF8 {
 
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -365,7 +395,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -389,7 +419,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -415,7 +445,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -444,7 +474,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -470,7 +500,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -496,7 +526,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -522,7 +552,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -548,7 +578,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -572,7 +602,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -594,7 +624,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -618,7 +648,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -642,7 +672,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -666,7 +696,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -689,7 +719,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -719,7 +749,7 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
@@ -749,13 +779,36 @@ class Kohana_UTF8 {
 	{
 		if ( ! isset(self::$called[__FUNCTION__]))
 		{
-			require SYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.EXT;
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
 
 			// Function has been called
 			self::$called[__FUNCTION__] = TRUE;
 		}
 
 		return _from_unicode($arr);
+	}
+
+	/**
+	 * UTF8::wordwrap
+	 *
+	 * @author      Ivan Tcholakov <ivantcholakov@gmail.com>
+	 * @param       string          The input string.
+	 * @param       int             The number of characters at which the string will be wrapped.
+	 * @param       string          The line is broken using the optional break parameter.
+	 * @param       bool            If the cut is set to TRUE, the string is always wrapped at or before the specified width.
+	 * @return      string|false
+	 */
+	public static function wordwrap($string, $width = 75, $break = "\n", $cut = false)
+	{
+		if ( ! isset(self::$called[__FUNCTION__]))
+		{
+			require KOHANASYSPATH.'utf8'.DIRECTORY_SEPARATOR.__FUNCTION__.KOHANAEXT;
+
+			// Function has been called
+			self::$called[__FUNCTION__] = TRUE;
+		}
+
+		return _wordwrap($string, $width, $break, $cut);
 	}
 
 } // End UTF8
